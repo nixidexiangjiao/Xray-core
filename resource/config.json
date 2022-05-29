@@ -1,0 +1,37 @@
+{
+  "log": {
+    "access": "/Users/lzero/Work/WorkSpace/github/Xray-core/access.log",
+    "error": "/Users/lzero/Work/WorkSpace/github/Xray-core/error.log",
+    "loglevel": "debug"
+  },
+  "inbounds": [
+    {
+      "port": 8070,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "7818f7d8-a957-55c7-88ac-43b4e15a90bd",
+            "level": 0,
+            "email": "",
+            "flow": "xtls-rprx-direct"
+          }
+        ],
+        "decryption": "none",
+        "fallbacks": [
+          {
+            "dest": 80
+          }
+        ]
+      },
+      "streamSettings": {
+         "network": "tcp"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
+}
